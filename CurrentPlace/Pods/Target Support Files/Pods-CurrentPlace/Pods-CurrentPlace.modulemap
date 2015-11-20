@@ -1,0 +1,6 @@
+framework module Pods_CurrentPlace {
+  umbrella header "Pods-CurrentPlace-umbrella.h"
+
+  export *
+  module * { export * }
+}
