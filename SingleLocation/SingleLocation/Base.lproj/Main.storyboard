@@ -25,8 +25,16 @@
                                     <action selector="requestLocationWithHandler:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UXX-8S-1UC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Undetermined" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-V1-0iI">
-                                <rect key="frame" x="211" y="289" width="110" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BRt-B7-NlT">
+                                <rect key="frame" x="195" y="434" width="211" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Request location with delegate"/>
+                                <connections>
+                                    <action selector="requestLocationWithDelegate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cQo-Nz-UOE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Undetermined" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xTL-V1-0iI">
+                                <rect key="frame" x="245" y="289" width="110" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -37,9 +45,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="3rs-ME-9CL" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="121" id="1sQ-vc-daZ"/>
+                            <constraint firstItem="BRt-B7-NlT" firstAttribute="centerX" secondItem="3rs-ME-9CL" secondAttribute="centerX" id="BHp-LC-Rvd"/>
                             <constraint firstItem="3rs-ME-9CL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EKs-1l-RYW"/>
-                            <constraint firstItem="xTL-V1-0iI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UbV-xD-FqG"/>
-                            <constraint firstItem="xTL-V1-0iI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="eTL-zp-9ei"/>
+                            <constraint firstItem="xTL-V1-0iI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QWR-zt-vmo"/>
+                            <constraint firstItem="xTL-V1-0iI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hYO-Rz-sJz"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="BRt-B7-NlT" secondAttribute="bottom" constant="136" id="lCY-9U-ueA"/>
+                            <constraint firstItem="xTL-V1-0iI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="uLf-As-ssd"/>
                         </constraints>
                     </view>
                     <connections>

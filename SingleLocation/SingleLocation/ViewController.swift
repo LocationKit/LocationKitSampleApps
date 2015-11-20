@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, LKLocationManagerDelegate {
 
     // Instantiate LocationKit and keep an instance around to use in this file
     let locationManager = LKLocationManager()
@@ -27,8 +27,11 @@ class ViewController: UIViewController {
         // Set your API token (retrieved from https://dashboard.locationkit.io)
         self.locationManager.apiToken = "your_api_token_here"
 
+        // Set this as the advancedDelegate (necessary only for the delegate location request)
+        self.locationManager.advancedDelegate = self
+
         // Start updating location
-        self.locationManager.startUpdatingLocation()
+        // self.locationManager.startUpdatingLocation()
     }
 
     @IBAction func requestLocationWithHandler(sender: UIButton) {
@@ -44,6 +47,16 @@ class ViewController: UIViewController {
         }
     }
     
-    
+    @IBAction func requestLocationWithDelegate(sender: UIButton) {
+        // Request the current location with a delegate
+        self.locationManager.requestLocation()
+    }
+
+    func locationManager(manager: LKLocationManager, didUpdateLocations locations: [CLLocation]) {
+        for location in locations {
+            // Let's set the label in the center of the screen
+            self.currentLocationLabel.text = "(\(location.coordinate.latitude), \(location.coordinate.longitude))"
+        }
+    }
 }
 
